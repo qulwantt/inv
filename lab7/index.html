@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота 7</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0b0c14;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 450px;
+            padding: 40px;
+            background: #0b0c14;
+            border-left: 2px solid #00e5ff;
+            border-right: 2px solid #76ff03;
+            border-top: 2px solid #1e1e24;
+            border-bottom: 2px solid #1e1e24;
+            box-sizing: border-box;
+        }
+        .question-input {
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: 20px;
+            border: none;
+            text-align: center;
+            font-size: 15px;
+            background-color: #eedeff;
+            color: #333;
+            margin-bottom: 40px;
+            outline: none;
+        }
+        .magic-ball {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 40%),
+                url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=500&q=80');
+            background-size: cover;
+            background-position: center;
+            box-shadow: 
+                inset -25px -25px 45px rgba(0,0,0,0.9),
+                inset 5px 5px 20px rgba(255,255,255,0.3),
+                0 0 20px rgba(167, 76, 204, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.1s;
+            position: relative;
+        }
+        .magic-ball::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .magic-ball:active {
+            transform: scale(0.96);
+        }
+        .answer-text {
+            color: #ffffff;
+            font-size: 32px;
+            font-weight: normal;
+            letter-spacing: 1px;
+            text-shadow: 
+                -1px -1px 0 #555,  
+                 1px -1px 0 #555,
+                -1px  1px 0 #555,
+                 1px  1px 0 #555,
+                 0 0 10px rgba(255, 255, 255, 0.8);
+            text-align: center;
+            user-select: none;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <script src="script.js"></script>
+</body>
+</html>

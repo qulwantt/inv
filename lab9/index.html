@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота 9 - Гра "21"</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+        }
+        .game-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+        .player-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .player-name {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .score-box {
+            background-color: #00a2e8;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 8px 50px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .card {
+            width: 140px;
+            height: 200px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background-color: #e0e0e0;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 60px;
+            font-weight: bold;
+        }
+        .center-controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .attempt-text {
+            font-size: 16px;
+            font-style: italic;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        .generate-btn {
+            background-color: #00ff00;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .generate-btn:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="game-container">
+        <div class="player-section">
+            <div class="player-name" id="userName">User</div>
+            <div class="score-box" id="userScore">0</div>
+            <div class="card" id="userCard">?</div>
+        </div>
+
+        <div class="center-controls">
+            <div class="attempt-text" id="attemptCount">Спроба 0 з 3</div>
+            <button class="generate-btn" id="generateBtn" onclick="playRound()">Generate</button>
+        </div>
+
+        <div class="player-section">
+            <div class="player-name">Computer</div>
+            <div class="score-box" id="compScore">0</div>
+            <div class="card" id="compCard">?</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
